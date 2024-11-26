@@ -7,7 +7,7 @@ let navbar = document.querySelector('.navbar');
  
 
 menu.onclick = () => {
-
+    console.log('Menu clicked');
     navbar.classList.toggle('active');
 
 }
