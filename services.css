@@ -71,18 +71,20 @@ body {
 }
 
 .service .content h1 {
-    font-size: 3.7rem;
+    font-size: 3rem;
     line-height: 1.3;
     letter-spacing: 1px;
     flex: 1;
     min-width: 300px;
+    text-align: center;
 }
 
 .service .content p {
     flex: 1;
     min-width: 300px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
+    text-align: center;
 }
 
 .cards {
@@ -168,12 +170,14 @@ body {
     }
 
     .service .content p {
+        font-size: 0.95rem;
         text-align: center;
     }
 }
 
 @media (max-width: 600px) {
     .service {
+        font-size: 2rem;
         padding: 2rem 5%;
     }
 
@@ -182,7 +186,7 @@ body {
     }
 
     .service .content p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .cards .card {
