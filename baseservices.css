@@ -1,0 +1,188 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font and Body Styling */
+body {
+    background: #fafafa;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    color: #20b2aa; /* Light sea green color */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.brand-name {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #20b2aa;
+}
+
+/* Wrapper for the Content */
+.wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.wrapper h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.wrapper p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Flexbox for the Cards */
+.content-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    min-height: 320px;
+    width: 320px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-align: center;
+    gap: 15px; /* Space between elements inside the card */
+    position: relative;
+    overflow: hidden; /* Ensure image stays inside card bounds */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Transition Effect for Each Card */
+.card:nth-child(1):hover {
+    background: linear-gradient(45deg, rgba(88, 70, 159, 0.7) 0%, rgba(136, 113, 199, 0.7) 100%),
+        url('itservices.gif'); /* Replace bg1.jpg with your image for the first card */
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-child(2):hover {
+    background: linear-gradient(45deg, rgba(88, 70, 159, 0.7) 0%, rgba(136, 113, 199, 0.7) 100%),
+        url('itservices2.gif'); /* Replace bg2.jpg with your image for the second card */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Icon Styling */
+.card i {
+    font-size: 3em; /* Increased size for uniformity */
+    color: #581ed6;
+    margin-bottom: 20px; /* More spacing between icon and text */
+    transition: color 0.3s ease;
+}
+
+.card:hover i {
+    color: #fff;
+}
+
+.card h2 {
+    font-size: 1.4em; /* Unified heading size */
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    font-weight: 600; /* Make headings bolder */
+}
+
+.card:hover h2 {
+    color: #fff;
+}
+
+.card p {
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px; /* More spacing between paragraph and button */
+    font-size: 1em; /* Consistent text size */
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.card:hover p {
+    color: #fff;
+}
+
+/* Button Styling */
+.see-more-button {
+    padding: 12px 20px;
+    background-color: #581ed6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em; /* Uniform button text size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* Button stays above the hover image */
+    z-index: 1;
+}
+
+.see-more-button:hover {
+    background-color: #6a34e1;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    .wrapper h1 {
+        font-size: 2em;
+    }
+
+    .content-box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}

@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Contact Form</title>  
     <link rel="stylesheet" href="contact.css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>  
 <body>  
     <div class="top-bar">
@@ -12,22 +11,26 @@
         <span class="company-name">SASHITEK</span>
     </div>
     <div class="contact-container">  
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">  
+        <form id="contactform" class="contact-left">  
+            <div class="alert">Your Message sent successfully</div>
+
             <div class="contact-left-title">  
                 <h2>Contact Us</h2> 
                 <hr> 
             </div>  
-            <input type="hidden" name="access_key" value="1c175a2a-eeee-48e7-bcf4-49c6d7484844">
 
-            <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <input type="text" id="name" name="name" placeholder="Your name" class="contact-inputs" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea id="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
             <button type="submit">Submit <img src="" alt=""></button>
         </form>  
         <div class="contact-right">  
             <img src="contact.jpg" alt="">
         </div>  
     </div>  
-    <script src="contact.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-database-compat.js"></script>
+
+    <script type="module" src="contacts.js"></script>
 </body>  
 </html>

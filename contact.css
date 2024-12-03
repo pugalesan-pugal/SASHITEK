@@ -136,7 +136,23 @@ body {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
+.alert{
+    width: 100%;
+    background:rgb(243, 14, 14);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+
 @media (max-width: 800px) {
+    .contact-container{
+        width: 0%;
+        overflow: hidden;
+    }
+
     .contact-inputs {
         width: 80vw;
     }
