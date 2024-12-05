@@ -37,7 +37,9 @@ function submitForm(e) {
 
     // Reset the form after submission
     document.getElementById("contactform").reset();
-    
+
+    // Show success message
+    showSuccessMessage();
 }
 
 // Save messages to Firebase
@@ -48,4 +50,15 @@ const saveMessage = (name, email, message) => {
         email: email,
         message: message,
     });
+};
+
+// Function to show success message
+const showSuccessMessage = () => {
+    const alertDiv = document.querySelector(".alert");
+    alertDiv.style.display = "block"; // Show the success message
+
+    // Hide the success message after 3 seconds
+    setTimeout(() => {
+        alertDiv.style.display = "none";
+    }, 3000);
 };
