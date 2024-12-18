@@ -63,3 +63,35 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+let slideIndex = 0;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Dot navigation
+function currentSlide(n) {
+    showSlides(slideIndex = n - 1);
+}
+
+function showSlides(n) {
+    let slides = document.querySelectorAll(".slide");
+    let dots = document.querySelectorAll(".dot");
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+
+    slides.forEach(slide => slide.style.display = "none");
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].classList.add("active");
+}
+
+// Auto slideshow
+setInterval(() => {
+    plusSlides(1);
+}, 3000); // Change slide every 3 seconds
+

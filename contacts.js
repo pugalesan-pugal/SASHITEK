@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
 // Reference to Firebase Realtime Database
 const contactFormDB = firebase.database().ref("contactForm");
+const notificationsDB = firebase.database().ref("notifications");
 
 // Helper function to get form values
 const getElementVal = (id) => document.getElementById(id).value;
@@ -62,3 +63,22 @@ const showSuccessMessage = () => {
         alertDiv.style.display = "none";
     }, 3000);
 };
+
+// Function to listen for new notifications in Firebase
+const listenForNotifications = () => {
+    notificationsDB.on("child_added", (snapshot) => {
+        const notification = snapshot.val();
+        displayNotification(notification.message);
+    });
+};
+
+// Function to display notifications
+const displayNotification = (message) => {
+    const notificationList = document.getElementById("notificationList");
+    const notificationItem = document.createElement("li");
+    notificationItem.textContent = message;
+    notificationList.appendChild(notificationItem);
+};
+
+// Call the function to start listening for notifications
+listenForNotifications();

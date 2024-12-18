@@ -1,0 +1,139 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3AADAA;
+    color: white;
+}
+
+.back-button {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Messages Section */
+.messages-container {
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.messages-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #16a2e7;
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messages-table th,
+.messages-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.messages-table th {
+    background-color: #3AADAA;
+    color: white;
+}
+
+.messages-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Download Button */
+.download-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3AADAA;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background-color: #2a8a8a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-name {
+        font-size: 1.2rem;
+    }
+
+    .messages-container {
+        padding: 15px;
+    }
+
+    .messages-table {
+        font-size: 0.9rem;
+    }
+
+    .messages-table th,
+    .messages-table td {
+        padding: 8px;
+    }
+
+    .download-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .company-name {
+        font-size: 1rem;
+    }
+
+    .messages-container {
+        padding: 10px;
+    }
+
+    .messages-table th,
+    .messages-table td {
+        padding: 6px;
+    }
+
+    .download-btn {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+}
